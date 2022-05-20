@@ -19,3 +19,53 @@ app.use(routes);
 db.once('open', () => {
   app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
 });
+
+
+
+
+
+
+
+
+
+
+
+// BACKEND TASKS
+
+// 
+// 2)seed info (blank options + blank images)
+// 3)routes
+// 4)write out a comment for what functions we need
+
+// FRONTEND TASKS
+
+// 1)components pages / structure
+// 2)write out a comment for what functions we need
+// 3)ui options + state w/ Zakk
+
+
+// SPRINKLES :D
+
+// 1)gender option
+// 2)different background
+// 3)user profile settings (updating username and password)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
