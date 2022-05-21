@@ -6,10 +6,10 @@ const characterSchema = new Schema({
     type: String,
     required: true,
   },
-  // gender: {
-  //   type: String,
-  //   required: true,
-  // },
+  gender: {
+    type: String,
+    required: true,
+  },
   codeLanguage: {
     type: String,
     required: true,
@@ -18,7 +18,9 @@ const characterSchema = new Schema({
     type: String,
     required: true,
   },
-  
+  prompt: {
+    type: String,
+  },
   image: {
     type: String,
   },
