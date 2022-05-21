@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Jess Scriptski",
+        "codeLanguage": "JS",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Charlie Stylima Sheen",
+        "codeLanguage": "CSS",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Hayden T. Manko-Lynn",
+        "codeLanguage": "HTML",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Sam Query-Lang",
+        "codeLanguage": "SQL",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    }
+]
