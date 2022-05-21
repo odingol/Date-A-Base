@@ -14,12 +14,12 @@ const characterSchema = new Schema({
     type: String,
     required: true,
   },
+  prompt: {
+    type: String,
+  },
   description: {
     type: String,
     required: true,
-  },
-  prompt: {
-    type: String,
   },
   image: {
     type: String,
