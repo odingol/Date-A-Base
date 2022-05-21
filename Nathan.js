@@ -5,4 +5,3 @@
 // Starting on routes
 
 
-console.log('Hello World :D')
