@@ -11,17 +11,20 @@ const resolvers = {
       return User.findOne({ username })
     },
     // Double check to see if the character do a get request once a username is found
-    characters: async (parent, { username }) => {
-        const params = username ? { username } : {};
-        return Character.find(params)
+    // characters: async (parent, { username }) => {
+    //     const params = username ? { username } : {};
+    //     return Character.find(params)
+    // },
+    getCharactersByGender: async (parent, { Character }) => {
+        return Character.find({Character})
     },
     character: async (parent, { characterId }) => {
         return Character.findOne({ _id: characterId });
-    }
+    },
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
+    addUser: async (parent, { username }) => {
       // First we create the user
       const user = await User.create({ username, email, password });
       // To reduce friction for the user, we immediately sign a JSON Web Token and log the user in after they are created
