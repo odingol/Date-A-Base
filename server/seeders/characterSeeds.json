@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Jess Scriptski",
+        "gender": "male",
+        "codeLanguage": "JS",
+        "prompt": "prompt by Jess Scriptski",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Charlie Stylima Sheen",
+        "gender": "male",
+        "codeLanguage": "CSS",
+        "prompt": "prompt by Charlie Stylima Sheen",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Hayden T. Manko-Lynn",
+        "gender": "male",
+        "codeLanguage": "HTML",
+        "prompt": "prompt by Hayden T. Manko-Lynn",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Sam Query-Lang",
+        "gender": "male",
+        "codeLanguage": "SQL",
+        "prompt": "prompt by Sam Query-Lang",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    }
+]
