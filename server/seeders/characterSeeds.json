@@ -1,17 +1,17 @@
 [
     {
-        "name": "Jess Scriptski",
+        "name": "Jessie Scriptski",
         "gender": "male",
         "codeLanguage": "JS",
-        "prompt": "prompt by Jess Scriptski",
+        "prompt": "prompt by Jessie Scriptski",
         "description": "Placeholder Value HERE",
         "image": "https://www.google.com/"
     },
     {
-        "name": "Charlie Stylima Sheen",
+        "name": "Charles Stylima Sheen",
         "gender": "male",
         "codeLanguage": "CSS",
-        "prompt": "prompt by Charlie Stylima Sheen",
+        "prompt": "prompt by Charles Stylima Sheen",
         "description": "Placeholder Value HERE",
         "image": "https://www.google.com/"
     },
@@ -28,6 +28,38 @@
         "gender": "male",
         "codeLanguage": "SQL",
         "prompt": "prompt by Sam Query-Lang",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Jess Scriptski",
+        "gender": "female",
+        "codeLanguage": "JS",
+        "prompt": "prompt by Jess Scriptski",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Charlie Stylima Sheen",
+        "gender": "female",
+        "codeLanguage": "CSS",
+        "prompt": "prompt by Charlie Stylima Sheen",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Hayley T. Manko-Lynn",
+        "gender": "female",
+        "codeLanguage": "HTML",
+        "prompt": "prompt by Hayley T. Manko-Lynn",
+        "description": "Placeholder Value HERE",
+        "image": "https://www.google.com/"
+    },
+    {
+        "name": "Sammy Query-Lang",
+        "gender": "female",
+        "codeLanguage": "SQL",
+        "prompt": "prompt by Sammy Query-Lang",
         "description": "Placeholder Value HERE",
         "image": "https://www.google.com/"
     }
