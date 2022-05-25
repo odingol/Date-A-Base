@@ -25,7 +25,7 @@ const userSchema = new Schema(
     },
     // add foreign key for gender
     // set savedCharacter to be an array of data that adheres to the CharacterSchema
-    savedCharacter: [characterSchema],
+    // savedCharacter: [characterSchema],
   },
   // set this to use virtual below
   {
