@@ -8,9 +8,8 @@ import Login from './components/pages/Login';
 import Gamepage from './components/pages/gamepage';
 // import Profile from './pages/Profile';
 import Header from './components/header';
-import Footer from './components/footer';
 import './components/assets/index.css';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -49,7 +48,7 @@ const client = new ApolloClient({
 //     </Typography>
 //   );
 // }
-const theme = createTheme();
+// const theme = createTheme();
 
 function App() {
   return (

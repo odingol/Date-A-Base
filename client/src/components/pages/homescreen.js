@@ -4,7 +4,7 @@
 
 // Insert username for characters to reference in their dialogue
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import * as React from "react";

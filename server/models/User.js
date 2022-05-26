@@ -1,8 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// import schema from Character.js
-const characterSchema = require("./Character");
 
 const userSchema = new Schema(
   {
@@ -25,7 +23,10 @@ const userSchema = new Schema(
     },
     // add foreign key for gender
     // set savedCharacter to be an array of data that adheres to the CharacterSchema
-    // savedCharacter: [characterSchema],
+    savedCharacter: {
+      type: Schema.Types.ObjectId,
+      ref: "Character"
+    },
   },
   // set this to use virtual below
   {
