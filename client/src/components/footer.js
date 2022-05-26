@@ -1,11 +1,21 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Typography } from "@mui/material";
 
-const Footer = () => {
-
-    return (
-        <footer className=""></footer>
-    )
-}
+const Footer = (props) => {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}{" "}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+};
 
 export default Footer;

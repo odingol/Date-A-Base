@@ -1,23 +1,3 @@
-// Howdy
-
-// Top of Screen: Name of game
-
-// Middle: Login/Account Creation credentials field
-
-// import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import Auth from '../../utils/auth';
-
-// const Login = () => {
-//     const logout = (event) => {
-//         event.preventDefault();
-//         Auth.logout();
-//     };
-//     return (
-//         <div></div>
-//     )
-// }
-
 // export default Login;
 import { LOGIN_USER } from '../../utils/mutations';
 
@@ -29,7 +9,7 @@ import Footer from '../footer';
 
 const theme = createTheme();
 
-export default function Login() {
+export default function Signup() {
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -140,6 +120,3 @@ export default function Login() {
     </ThemeProvider>
   );
 };
-
-
-
