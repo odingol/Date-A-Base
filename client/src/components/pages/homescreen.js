@@ -16,8 +16,8 @@ import Container from "@mui/material/Container";
 const Home = () => {
   return (
     <React.Fragment>
-      <CssBaseline />
       <Container maxWidth="lg" className="container homepage">
+      <CssBaseline />
         <Box>
           <Container maxWidth="md" className="userInfo">
             <img></img>
