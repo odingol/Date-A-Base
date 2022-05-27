@@ -10,7 +10,7 @@ const Footer = (props) => {
     >
       {"Copyright © "}{" "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Date-A-Base
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
