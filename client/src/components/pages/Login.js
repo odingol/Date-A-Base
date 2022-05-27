@@ -21,6 +21,7 @@ import { useState } from 'react';
 // export default Login;
 import { LOGIN_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
+
 import * as React from 'react';
 import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Paper, Box, Grid, Typography,  } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -31,7 +32,7 @@ const theme = createTheme();
 
 export default function Login() {
 
-   const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -139,7 +140,7 @@ export default function Login() {
       </Grid>
     </ThemeProvider>
   );
-}
+};
 
-// export default Login;
+
 
