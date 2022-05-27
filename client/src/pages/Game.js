@@ -1,6 +1,7 @@
+import React from "react";
 import { Link, Typography } from "@mui/material";
 
-const Footer = (props) => {
+export default function Game(props) {
   return (
     <Typography
       variant="body2"
@@ -10,12 +11,10 @@ const Footer = (props) => {
     >
       {"Copyright © "}{" "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        DataBase
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
   );
-};
-
-export default Footer;
+}
