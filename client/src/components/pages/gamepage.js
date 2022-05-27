@@ -7,7 +7,7 @@
 // Bottom Screen: Prompt selections
 
 // import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import '../assets/index.css'
 
 const Gamepage = () => {

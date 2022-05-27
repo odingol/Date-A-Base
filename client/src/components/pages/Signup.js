@@ -1,27 +1,28 @@
 // export default Login;
-import { LOGIN_USER } from '../../utils/mutations';
+// import { LOGIN_USER } from '../../utils/mutations';
 import * as React from 'react';
-import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Paper, Box, Grid, Typography,  } from '@mui/material';
+import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Paper, Box, Grid, Typography,  } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Footer from '../footer';
+import { Link } from 'react-router-dom';
 
 const theme = createTheme();
 
 export default function Signup() {
 
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  // const [formState, setFormState] = useState({ email: '', password: '' });
+  // const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -60,11 +61,11 @@ export default function Signup() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'success.main' }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign Up
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
@@ -91,26 +92,16 @@ export default function Signup() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
+              <Link to="/homepage">
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Sign Up!
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
+              </Link>
               <Footer sx={{ mt: 5 }} />
             </Box>
           </Box>

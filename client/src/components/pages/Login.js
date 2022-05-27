@@ -4,7 +4,7 @@
 
 // Middle: Login/Account Creation credentials field
 
-import { useState } from 'react';
+// import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import Auth from '../../utils/auth';
 
@@ -19,31 +19,42 @@ import { useState } from 'react';
 // }
 
 // export default Login;
+<<<<<<< Updated upstream
 import { LOGIN_USER } from '../../utils/mutations';
 import { useMutation } from '@apollo/client';
 
+=======
+// import { LOGIN_USER } from '../../utils/mutations';
+// import { useMutation } from '@apollo/client';
+>>>>>>> Stashed changes
 import * as React from 'react';
-import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Link, Paper, Box, Grid, Typography,  } from '@mui/material';
+import { Avatar, Button, CssBaseline, TextField, FormControlLabel, Checkbox, Paper, Box, Grid, Typography,  } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Footer from '../footer';
+import { Link } from "react-router-dom";
 
 const theme = createTheme();
 
 export default function Login() {
 
+<<<<<<< Updated upstream
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
+=======
+  //  const [formState, setFormState] = useState({ email: '', password: '' });
+  // const [login, { error, data }] = useMutation(LOGIN_USER);
+>>>>>>> Stashed changes
 
   // update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -82,7 +93,7 @@ export default function Login() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'warning.main' }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -113,6 +124,7 @@ export default function Login() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
+              <Link to="/homepage">
               <Button
                 type="submit"
                 fullWidth
@@ -121,15 +133,16 @@ export default function Login() {
               >
                 Sign In
               </Button>
+              </Link>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link to="/" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
+                  <Link to="/signup" variant="body2">
+                    Don't have an account? Sign Up
                   </Link>
                 </Grid>
               </Grid>
