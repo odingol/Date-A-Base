@@ -106,7 +106,7 @@ export default function Home(props) {
                   className="startGameButton"
                   size="large"
                 >
-                  <Link className="startGame" to="/game">
+                  <Link className="startGame" to="/Game">
                     JOIN CLASS
                   </Link>
                 </Button>
