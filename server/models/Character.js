@@ -27,8 +27,12 @@ const characterSchema = new Schema({
   link: {
     type: String,
   },
+  dialogue: {
+    type: String,
+  }
 });
 
 const Character = model('Character', characterSchema);
 
 module.exports = Character;
+
