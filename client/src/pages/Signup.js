@@ -55,7 +55,6 @@ export default function Signup(props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Link to="/Home">← Go to Login</Link>
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         <Grid
@@ -88,7 +87,7 @@ export default function Signup(props) {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign Up
             </Typography>
             <Box
               component="form"
@@ -144,6 +143,11 @@ export default function Signup(props) {
                 Sign In
               </Button>
             </Box>
+            <Grid container>
+              <Grid item xs>
+              <Link href="/" variant="body2">← Go to Login</Link>
+              </Grid>
+            </Grid>
             {/* Error Message for invalid username */}
             {/* {error ? (
               <div>
