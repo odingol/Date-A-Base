@@ -7,15 +7,21 @@ import { CssBaseline, Box, Container } from "@mui/material";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Paper, Typography, Button, Grid } from "@mui/material";
-import homeImage from "../assets/images/UWbackdrop.png";
+import { makeStyles } from '@material-ui/core/styles';
 
-const homeStyle = {
-  paperContainer: {
-    backgroundImage: `url(${homeImage})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    minHeight: '100vh',
+    backgroundImage:`url(${process.env.PUBLIC_URL + '/assets/UWbackdrop.png'})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-};
+
+}));
 
 // const WhiteTextTypography = withStyles({
 //   root: {
@@ -24,15 +30,18 @@ const homeStyle = {
 // })(Typography);
 
 export default function Home(props) {
+  const classes = useStyles();
+
   // const { loading, data } = useQuery(QUERY_CHARACTERS);
   // const savedCharacter = data?.savedCharacter || [];
   return (
     <React.Fragment>
-      <Header sx={{ mt: 5 }} />
+      <Header style={{backgroundColor: 'hsla(0, 100%, 90%, 0.8'}} sx={{ mt: 5 }} />
+      <div className={classes.root}>
       <Typography color="white">
         <CssBaseline />
         {/* User Info Section */}
-        <Paper style={homeStyle.paperContainer} maxWidth="lg">
+        <Paper style={{padding: 60, border: "3px solid black", width: '50rem', backgroundColor: 'hsla(0, 100%, 90%, 0.8'}}>
           <Container maxWidth="lg" className="container homepage">
             <Box>
               <Container maxWidth="md" className="userInfo">
@@ -116,6 +125,7 @@ export default function Home(props) {
           </Container>
         </Paper>
       </Typography>
+    </div>
       <Footer sx={{ mt: 5 }} />
     </React.Fragment>
   );
