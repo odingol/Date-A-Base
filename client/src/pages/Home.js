@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Link, resolvePath } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { useQuery } from '@apollo/client';
 // import { QUERY_CHARACTERS } from "../utils/queries";
 // Styling Imports
 import { CssBaseline, Box, Container } from "@mui/material";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Paper, Typography, Button, Grid, withStyles } from "@mui/material";
+import { Paper, Typography, Button, Grid } from "@mui/material";
 import homeImage from "../assets/images/UWbackdrop.png";
 
 const homeStyle = {
@@ -17,11 +17,11 @@ const homeStyle = {
   },
 };
 
-const WhiteTextTypography = withStyles({
-  root: {
-    color: "#FFFFFF"
-  }
-})(Typography);
+// const WhiteTextTypography = withStyles({
+//   root: {
+//     color: "#FFFFFF"
+//   }
+// })(Typography);
 
 export default function Home(props) {
   // const { loading, data } = useQuery(QUERY_CHARACTERS);
