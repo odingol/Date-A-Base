@@ -4,8 +4,11 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async () => {
-      return await User.find();
+    user: async (parent, args, context) => {
+      return await User.find({
+        // Finds user by logged in user's id.
+        _id: context.user._id
+      });
     },
     // Double check to see if the character do a get request once a username is found
     savedCharacter: async () => {
