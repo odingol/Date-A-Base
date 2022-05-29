@@ -16,8 +16,8 @@ import React from "react";
 //   );
 // };
 
-const Dialogue = () => {
-  const promptQuestions  = [
+const Dialogue = ({characterPrompt}) => {
+const promptQuestions  = [
     {
       charList: {
         'Hayden T. Manko-Lynn': {
@@ -150,8 +150,11 @@ const Dialogue = () => {
         }
       ]
     }
-  ] 
-  return promptQuestions ();
+  ]
+  if (!characterPrompt.length) {
+        return <h2>No Character Prompts Available</h2>;
+      }
+  return promptQuestions();
 } 
 
 export default Dialogue;
