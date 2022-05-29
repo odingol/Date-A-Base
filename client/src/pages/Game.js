@@ -19,6 +19,8 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { ClassNames } from "@emotion/react";
 
+import Dialogue from '../components/Dialogue'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
@@ -71,68 +73,11 @@ export default function Game(props) {
               Images
             </Typography>
             <Paper style={{border: "1px solid black", width: "50rem", height: "5rem"}} sx={{mb:3}}>
-              <h1>Dialogue</h1>
+              {/* <h1>Dialogue</h1> */}
+              <div>
+                <Dialogue characters={characters} />
+              </div>
             </Paper>
-                {/* <Grid item xs={12}> */}
-                  {/* <FormControl fullWidth variant="outlined">
-                    <InputLabel id="category-select-label">
-                      Select category:
-                    </InputLabel>
-                    <Select
-                      required
-                      name="category"
-                      id="category-select"
-                      label="Select category"
-                      labelId="category-select-label"
-                    >
-                        <MenuItem>
-                        Hello
-                        </MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <FormControl fullWidth variant="outlined">
-                    <InputLabel id="difficulty-select-label">
-                      Select Difficulty:
-                    </InputLabel>
-                    <Select
-                      required
-                      name="difficulty"
-                      id="difficulty-select"
-                      label="Select Difficulty"
-                      labelId="difficulty-select-label"
-                    >
-                        <MenuItem>
-                          Good Afternoon
-                        </MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    inputProps={{ min: 1, max: 10 }}
-                    required
-                    fullWidth
-                    type="number"
-                    id="quiz-number"
-                    variant="outlined"
-                    name="quiz-number"
-                    label={`Add a quiz number from 1 to 10`}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    inputProps={{ min: 1, max: 10 }}
-                    required
-                    fullWidth
-                    type="number"
-                    id="quiz-number"
-                    variant="outlined"
-                    name="quiz-number"
-                    label={`Add a quiz number from 1 to 10`}
-                  />
-                </Grid> */}
                 <Grid container spacing ={1} columns={16}>
                   <Grid item xs={16}>
                <Button variant="outlined" style={{width: '40rem', padding: 15 }}>Prompt</Button>
