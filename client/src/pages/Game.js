@@ -38,29 +38,29 @@ export default function Game(props) {
 
   // We need to import useMutation in our mutations.js so we can use the `${userName}` in our prompt1
 
-  // const promptArray = [
-  //   {
-  //     prompt1: "Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?",
-  //     responses: [
-  //       {
-  //         character: 'Hayden T. Manko-Lynn',
-  //         dialogue: "I’m not sure yet, but I’m ready to <div> right into it!",
-  //       },
-  //       {
-  //         character: 'Jessie Scriptski',
-  //         dialogue: 'I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.',
-  //       },
-  //       {
-  //         character: 'Charles Stylima Sheen',
-  //         dialogue: 'I’m just here to let my style cascade on the class!',
-  //       },
-  //       {
-  //         character: 'Sam Query-Lang',
-  //         dialogue: 'I’m here to learn about databases and go on date-a-bases. Ha Get it?',
-  //       },
-  //     ]
-  //   }
-  // ];
+  const promptArray = [
+    {
+      prompt1: `Hey you must be the new student! ${userName} Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?`,
+      responses: [
+        {
+          character: 'Hayden T. Manko-Lynn',
+          dialogue: "I’m not sure yet, but I’m ready to <div> right into it!",
+        },
+        {
+          character: 'Jessie Scriptski',
+          dialogue: 'I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.',
+        },
+        {
+          character: 'Charles Stylima Sheen',
+          dialogue: 'I’m just here to let my style cascade on the class!',
+        },
+        {
+          character: 'Sam Query-Lang',
+          dialogue: 'I’m here to learn about databases and go on date-a-bases. Ha Get it?',
+        },
+      ]
+    }
+  ];
 
 
   const classes = useStyles();
