@@ -1,12 +1,25 @@
 [
   {
+    "name": "Hayden T. Manko-Lynn",
+    "gender": "male",
+    "codeLanguage": "HTML",
+    "prompt": "Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?",
+    "description": "A fan of the classics, Hayden strives to be the best HTML developer in history. His goal is to be so good at HTML design and formatting that people forget about things that deviate from vanilla HTML. Hayden works well with classmates like Charles.",
+    "image": "https://www.google.com/",
+    "dialog1": "I’m not sure yet, but I’m ready to <div> right into it! ",
+    "dialog2": "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
+    "dialog3": "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ",
+    "dialog4": "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time? ",
+    "dialog5": "Hayden"
+  },
+  {
     "name": "Jessie Scriptski",
     "gender": "male",
     "codeLanguage": "JS",
     "prompt": "That’s so cool! I’m here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox",
     "description": "Jessie is a dedicated coder who comes from an esteemed family of developers. He likes coding, playing video games about coding, and making various javascript related puns.",
     "image": "https://www.google.com/",
-    "dialog1": "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound. ",
+    "dialog1": "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.",
     "dialog2": "Oh right on! I’m more of a Google Chrome user myself. I take it you took up JS from your mom? ",
     "dialog3": "No thanks, I’m not impressed with your methods(). ",
     "dialog4": "You seem really nice and detail oriented but I don’t think this will function() well.",
@@ -24,19 +37,6 @@
     "dialog3": "Sure! Let’s pull ourselves up from the bootstraps and rock this class!",
     "dialog4": "I’m sort of looking for someone who is looking to go above and beyond to wow the graders. Sorry. ",
     "dialog5": "Charlie"
-  },
-  {
-    "name": "Hayden T. Manko-Lynn",
-    "gender": "male",
-    "codeLanguage": "HTML",
-    "prompt": "Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?",
-    "description": "A fan of the classics, Hayden strives to be the best HTML developer in history. His goal is to be so good at HTML design and formatting that people forget about things that deviate from vanilla HTML. Hayden works well with classmates like Charles.",
-    "image": "https://www.google.com/",
-    "dialog1": "I’m not sure yet, but I’m ready to <div> right into it! ",
-    "dialog2": "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
-    "dialog3": "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ",
-    "dialog4": "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time? ",
-    "dialog5": "Hayden"
   },
   {
     "name": "Sam Query-Lang",
@@ -60,13 +60,26 @@
     "image": "https://a.simbi.com/users/17728/avatars/medium-5cb02656a1ee59d8c702eea0c398bf0a.jpg?1473672322"
   },
   {
+    "name": "Hayley T. Manko-Lynn",
+    "gender": "female",
+    "codeLanguage": "HTML",
+    "prompt": "Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?",
+    "description": "Ready to excell from the get-go, Hayley is mostly focused on learning HTML development, but is also ready to take on the challenges of other coding concepts and languages.",
+    "image": "https://www.google.com/",
+    "dialog1": "I’m not sure yet, but I’m ready to <div> right into it! ",
+    "dialog2": "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
+    "dialog3": "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ",
+    "dialog4": "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time? ",
+    "dialog5": "Hayden"
+  },
+  {
     "name": "Jess Scriptski",
     "gender": "female",
     "codeLanguage": "JS",
     "prompt": "That’s so cool! I’m here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox",
     "description": "Jess is an aspiring web developer with a family legacy of successful coders. She is an avid gamer who wants to create a new market for javascript created video games. A big fan of dating simulators, Jess may try and woo you with javascript related puns.",
     "image": "https://www.google.com/",
-    "dialog1": "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound. ",
+    "dialog1": "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.",
     "dialog2": "Oh right on! I’m more of a Google Chrome user myself. I take it you took up JS from your mom? ",
     "dialog3": "No thanks, I’m not impressed with your methods(). ",
     "dialog4": "You seem really nice and detail oriented but I don’t think this will function() well.",
@@ -86,19 +99,6 @@
     "dialog5": "Charlie"
   },
   {
-    "name": "Hayley T. Manko-Lynn",
-    "gender": "female",
-    "codeLanguage": "HTML",
-    "prompt": "Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?",
-    "description": "Ready to excell from the get-go, Hayley is mostly focused on learning HTML development, but is also ready to take on the challenges of other coding concepts and languages.",
-    "image": "https://www.google.com/",
-    "dialog1": "I’m not sure yet, but I’m ready to <div> right into it! ",
-    "dialog2": "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
-    "dialog3": "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ",
-    "dialog4": "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time? ",
-    "dialog5": "Hayden"
-  },
-  {
     "name": "Sammy Query-Lang",
     "gender": "female",
     "codeLanguage": "SQL",
@@ -112,3 +112,4 @@
     "dialog5": "Sam"
   }
 ]
+ 
