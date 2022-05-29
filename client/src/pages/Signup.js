@@ -145,7 +145,7 @@ export default function Signup(props) {
             </Box>
             <Grid container>
               <Grid item xs>
-              <Link href="/" variant="body2">← Go to Login</Link>
+              <Link href="/Home" variant="body2">← Go to Login</Link>
               </Grid>
             </Grid>
             {/* Error Message for invalid username */}

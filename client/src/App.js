@@ -45,9 +45,9 @@ export default function App() {
           <div className="container">
             <Routes>
               <Route exact path="/" element={<Login />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/Home" element={<Home />} />
               <Route path="/Game" element={<Game />} />
-              <Route path="/signup" element={<Signup />} />
+              <Route path="/Signup" element={<Signup />} />
             </Routes>
           </div>
         </div>
