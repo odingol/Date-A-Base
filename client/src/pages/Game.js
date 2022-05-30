@@ -45,18 +45,10 @@ export default function Game(props) {
   });
   console.log(promptQuestions);
   const currentPrompt = promptQuestions.prompts[promptIndex];
-
   const classes = useStyles();
-
   const { loading, data } = useQuery(QUERY_CHARACTERS);
-
   const characters = data || {};
 
-  // const [prompt, setPrompt] = useState(characters);
-
-  // setPrompt([...prompt])
-
-  // const characterData = data;
 
   console.log("GAME CHARACTER", characters);
   if (loading) {
@@ -81,11 +73,6 @@ export default function Game(props) {
         align="center"
         {...props}
       >
-        {/* <div>
-    { prompt.map((characterPrompt) => (
-    <p key= {characterPrompt.id} >Hello my name is {characterPrompt.name} here is my prompt: {characterPrompt.prompt}</p>
-    ))}
-    </div> */}
         <Container>
           <Paper
             style={{
@@ -112,57 +99,39 @@ export default function Game(props) {
                 {/* <div>
                 <Dialogue characters={characters} />
               </div> */}
-              </Paper>
-              <Grid container spacing={1} columns={16}>
-                <Grid item xs={16}>
-                  <Button
-                    onClick={dialogueClicked}
-                    data-name={"Hayden T. Manko-Lynn"}
-                    variant="outlined"
-                    size="small"
-                    style={{ width: "40rem", padding: 15 }}
-                  >
-                    {currentPrompt.dialog1}
-                  </Button>
-                </Grid>
-                <Grid item xs={16}>
-                  <Button
-                    onClick={dialogueClicked}
-                    data-name={"Jessie Scriptski"}
-                    variant="outlined"
-                    size="small"
-                    style={{ width: "40rem", padding: 15 }}
-                  >
-                    {currentPrompt.dialog2}
-                  </Button>
-                </Grid>
-                <Grid item xs={16}>
-                  <Button
-                    onClick={dialogueClicked}
-                    data-name={"Charles Stylima Sheen"}
-                    variant="outlined"
-                    size="small"
-                    style={{ width: "40rem", padding: 15 }}
-                  >
-                    {currentPrompt.dialog3}
-                  </Button>
-                </Grid>
-                <Grid item xs={16}>
-                  <Button
-                    onClick={dialogueClicked}
-                    data-name={"Sam Query-Lang"}
-                    variant="outlined"
-                    size="small"
-                    style={{ width: "40rem", padding: 15 }}
-                  >
-                    {currentPrompt.dialog4}
-                  </Button>
-                </Grid>
-              </Grid>
-            </>
-          </Paper>
-        </Container>
-      </Typography>
-    </div>
+            </Paper>
+                <Grid container spacing ={1} columns={16}>
+                  <Grid item xs={16}>
+               <Button onClick= {dialogueClicked} data-name = {"Hayden T. Manko-Lynn"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog1.text}</Button>
+               </Grid>
+               <Grid item xs={16}>
+               <Button onClick= {dialogueClicked} data-name = {"Jessie Scriptski"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog2.text}</Button>
+               </Grid>
+               <Grid item xs={16}>
+               <Button onClick= {dialogueClicked} data-name = {"Charles Stylima Sheen"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog3.text}</Button>
+               </Grid>
+               <Grid item xs={16}>
+               <Button onClick= {dialogueClicked} data-name = {"Sam Query-Lang"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog4.text}</Button>
+               </Grid>
+               </Grid>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{m:3}}
+              >
+                Submit
+              </Button>
+          </>
+      </Paper>
+    </Container>
+      {"Copyright Â© "}{" "}
+      <Link color="inherit" href="https://mui.com/">
+        DataBase
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  </div>
   );
 }
