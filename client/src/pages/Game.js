@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link } from "@mui/material";
-// import { QUERY_CHARACTERS } from "../utils/queries";
-// import { useQuery } from '@apollo/client';
+import { QUERY_CHARACTERS } from "../utils/queries";
+import { useQuery } from '@apollo/client';
 import {
   Grid,
   Paper,
@@ -19,7 +19,8 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { ClassNames } from "@emotion/react";
 
-import Dialog from '../components/Dialog'
+import promptQuestions from "../components/Dialogue";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,36 +39,21 @@ export default function Game(props) {
 
   // We need to import useMutation in our mutations.js so we can use the `${userName}` in our prompt1
 
-  // const promptArray = [
-  //   {
-  //     prompt1: `Hey you must be the new student! ${userName} Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?`,
-  //     responses: [
-  //       {
-  //         character: 'Hayden T. Manko-Lynn',
-  //         dialogue: "I’m not sure yet, but I’m ready to <div> right into it!",
-  //       },
-  //       {
-  //         character: 'Jessie Scriptski',
-  //         dialogue: 'I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.',
-  //       },
-  //       {
-  //         character: 'Charles Stylima Sheen',
-  //         dialogue: 'I’m just here to let my style cascade on the class!',
-  //       },
-  //       {
-  //         character: 'Sam Query-Lang',
-  //         dialogue: 'I’m here to learn about databases and go on date-a-bases. Ha Get it?',
-  //       },
-  //     ]
-  //   }
-  // ];
-
+const [promptIndex, setPromptIndex] = useState(0)
+const [charPoints, setCharPoints] = useState({
+  "Hayden T. Manko-Lynn": 0,
+  "Jessie Scriptski": 0,
+  "Charles Stylima Sheen": 0,
+  "Sam Query-Lang": 0
+})
+console.log(promptQuestions);
+const currentPrompt = promptQuestions.prompts[promptIndex]
 
   const classes = useStyles();
   
-  // const { loading, data } = useQuery(QUERY_CHARACTERS);
+  const { loading, data } = useQuery(QUERY_CHARACTERS);
 
-  // const characters = data || {};
+  const characters = data || {};
 
   // const [prompt, setPrompt] = useState(characters);
 
@@ -75,11 +61,22 @@ export default function Game(props) {
 
   // const characterData = data;
 
-  // console.log("GAME CHARACTER", characters)
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
+  console.log("GAME CHARACTER", characters)
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  console.log(promptIndex, charPoints);
+const dialogueClicked = function(event) {
+const charName = event.target.dataset.name
+setCharPoints({...charPoints, [charName]: charPoints[charName]+1})
+if (promptIndex < promptQuestions.prompts.length) {
+  setPromptIndex(promptIndex +1) 
+} else {
+  //end logic or tie to home page for results. 
+}
+  
+ 
+}
 
   return (
   <div className={classes.root}>
@@ -87,13 +84,13 @@ export default function Game(props) {
     variant="body2"
     color="text.secondary"
     align="center"
-    // {...props}
+    {...props}
     >
-    <div>
-    {/* { prompt.map((characterPrompt) => (
+    {/* <div>
+    { prompt.map((characterPrompt) => (
     <p key= {characterPrompt.id} >Hello my name is {characterPrompt.name} here is my prompt: {characterPrompt.prompt}</p>
-    ))} */}
-    </div>
+    ))}
+    </div> */}
     <Container>
       <Paper style={{padding: 80, border: "3px solid black", width: '50rem', backgroundColor: 'hsla(0, 100%, 90%, 0.8'}}>
           <>
@@ -101,23 +98,23 @@ export default function Game(props) {
               Images
             </Typography>
             <Paper style={{border: "1px solid black", width: "50rem", height: "5rem"}} sx={{mb:3}}>
-              {/* <h1>Dialogue</h1> */}
-              <div>
-                <Dialog />
-              </div>
+              <p>{currentPrompt.prompt}</p>
+              {/* <div>
+                <Dialogue characters={characters} />
+              </div> */}
             </Paper>
                 <Grid container spacing ={1} columns={16}>
                   <Grid item xs={16}>
-               <Button variant="outlined" style={{width: '40rem', padding: 15 }}>{}</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Hayden T. Manko-Lynn"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog1}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button variant="outlined" style={{width: '40rem', padding: 15}}>Prompt</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Jessie Scriptski"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog2}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button variant="outlined" style={{width: '40rem', padding: 15 }}>Prompt</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Charles Stylima Sheen"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog3}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button variant="outlined" style={{width: '40rem', padding: 15}}>Prompt</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Sam Query-Lang"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog4}</Button>
                </Grid>
                </Grid>
               <Button
@@ -131,7 +128,7 @@ export default function Game(props) {
           </>
       </Paper>
     </Container>
-      {"Copyright © "}{" "}
+      {"Copyright Â© "}{" "}
       <Link color="inherit" href="https://mui.com/">
         DataBase
       </Link>{" "}
