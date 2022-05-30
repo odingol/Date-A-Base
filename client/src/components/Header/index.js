@@ -13,8 +13,9 @@ export default function Header(props) {
     <Typography
       variant="h5"
       color="gold"
-      background-color="purple"
+      backgroundColor="purple"
       align="center"
+      marginTop="0"
     >
       <h1 textAlign="center" className="gameTitle">
         Date<span>-A-</span>Base
