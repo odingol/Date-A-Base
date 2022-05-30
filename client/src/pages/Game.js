@@ -19,7 +19,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 // import { ClassNames } from "@emotion/react";
 
-import Dialogue from '../components/Dialogue'
+import Dialog from '../components/Dialog'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -89,11 +89,11 @@ export default function Game(props) {
     align="center"
     // {...props}
     >
-    {/* <div>
-    { prompt.map((characterPrompt) => (
+    <div>
+    {/* { prompt.map((characterPrompt) => (
     <p key= {characterPrompt.id} >Hello my name is {characterPrompt.name} here is my prompt: {characterPrompt.prompt}</p>
-    ))}
-    </div> */}
+    ))} */}
+    </div>
     <Container>
       <Paper style={{padding: 80, border: "3px solid black", width: '50rem', backgroundColor: 'hsla(0, 100%, 90%, 0.8'}}>
           <>
@@ -103,12 +103,12 @@ export default function Game(props) {
             <Paper style={{border: "1px solid black", width: "50rem", height: "5rem"}} sx={{mb:3}}>
               {/* <h1>Dialogue</h1> */}
               <div>
-                <Dialogue />
+                <Dialog />
               </div>
             </Paper>
                 <Grid container spacing ={1} columns={16}>
                   <Grid item xs={16}>
-               <Button variant="outlined" style={{width: '40rem', padding: 15 }}>Prompt</Button>
+               <Button variant="outlined" style={{width: '40rem', padding: 15 }}>{}</Button>
                </Grid>
                <Grid item xs={16}>
                <Button variant="outlined" style={{width: '40rem', padding: 15}}>Prompt</Button>

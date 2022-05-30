@@ -19,6 +19,7 @@ export const QUERY_CHARACTERS = gql`
       gender
       codeLanguage
       prompt
+      dialog
       description
       image
     }
