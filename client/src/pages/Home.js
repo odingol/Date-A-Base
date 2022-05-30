@@ -36,7 +36,7 @@ export default function Home(props) {
   // const savedCharacter = data?.savedCharacter || [];
   return (
     <React.Fragment>
-      <Header style={{backgroundColor: 'hsla(0, 100%, 90%, 0.8'}} sx={{ mt: 5 }} />
+      <Header style={{backgroundColor: 'hsla(0, 100%, 90%, 0.8'}} sx={{ mt: 0 }} />
       <div className={classes.root}>
       <Typography color="white">
         <CssBaseline />
