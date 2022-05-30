@@ -1,4 +1,4 @@
-import React from "react";
+
 
 // const Dialogue = ({ characters }) => {
 //   if (!characters.length) {
@@ -16,8 +16,8 @@ import React from "react";
 //   );
 // };
 
-const Dialogue = () => {
-  const promptQuestions  = [
+
+  const promptQuestions  = 
     {
       charList: {
         'Hayden T. Manko-Lynn': {
@@ -86,7 +86,7 @@ const Dialogue = () => {
       },
       prompts: [
         {
-          prompt: "Hayden: 'Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
+          prompt: "Hayden: 'Hey you must be the new student! USERNAME Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
           dialog1: "I'm not sure yet, but I'm ready to <div> right into it! ",
           dialog2: "Very Cool! Maybe sometime you could help me learn about handlebars. I'd really like to impress Hayden.",
           dialog3: 'Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ',
@@ -100,14 +100,14 @@ const Dialogue = () => {
           dialog4: "You seem really nice and detail oriented but I don't think this will function() well."
         },
         {
-          prompt: "Charles: '`${userName}` do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
+          prompt: "Charles: 'USERNAME do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
           dialog1: "I'm just here to let my style cascade on the class! ",
           dialog2: "Oh no way! Firefox? That's pretty cool, although I do have some design ideas that they may want to change.",
           dialog3: "Sure! Let's pull ourselves up from the bootstraps and rock this class!",
           dialog4: "I'm sort of looking for someone who is looking to go above and beyond to wow the graders. Sorry. "
         },
         {
-          prompt: "Sam: 'Hey `${userName}`, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
+          prompt: "Sam: 'Hey USERNAME, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
           dialog1: "I'm here to learn about databases and go on date-a-bases. Ha Get it? ",
           dialog2: '*Ignores them* ',
           dialog3: "Let's table this for now, but maybe we could meet up later. What row are you sitting in? ",
@@ -115,13 +115,13 @@ const Dialogue = () => {
         },
         {
           prompt: "Brian: 'Alright class, it's time to get your groups together. Let me know who you would like to work with. But no promises that we will be able to get everyone paired up with their desired choice. Yay coding!'",
-          dialog1: undefined,
-          dialog2: undefined,
-          dialog3: undefined,
-          dialog4: undefined
+          dialog1: "Hayden T. Manko-Lynn",
+          dialog2: "Jessie Scriptski",
+          dialog3: "Charles Stylima Sheen",
+          dialog4: "Sam Query-Lang"
         },
         {
-          prompt: "Haley: 'Hey you must be the new student! `${userName}` Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
+          prompt: "Haley: 'Hey you must be the new student! USERNAME Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
           dialog1: "I'm not sure yet, but I'm ready to <div> right into it! ",
           dialog2: "Very Cool! Maybe sometime you could help me learn about handlebars. I'd really like to impress Hayden.",
           dialog3: 'Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ',
@@ -135,14 +135,14 @@ const Dialogue = () => {
           dialog4: "You seem really nice and detail oriented but I don't think this will function() well."
         },
         {
-          prompt: "Charlie: '`${userName}` do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
+          prompt: "Charlie: 'USERNAME do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
           dialog1: "I'm just here to let my style cascade on the class! ",
           dialog2: "Oh no way! Firefox? That's pretty cool, although I do have some design ideas that they may want to change.",
           dialog3: "Sure! Let's pull ourselves up from the bootstraps and rock this class!",
           dialog4: "I'm sort of looking for someone who is looking to go above and beyond to wow the graders. Sorry. "
         },
         {
-          prompt: "Sammy: 'Hey `${userName}`, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
+          prompt: "Sammy: 'Hey USERNAME, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
           dialog1: "I'm here to learn about databases and go on date-a-bases. Ha Get it? ",
           dialog2: '*Ignores them* ',
           dialog3: "Let's table this for now, but maybe we could meet up later. What row are you sitting in? ",
@@ -150,8 +150,8 @@ const Dialogue = () => {
         }
       ]
     }
-  ] 
-  return promptQuestions ();
-} 
+   
 
-export default Dialogue;
+ 
+
+export default promptQuestions;
