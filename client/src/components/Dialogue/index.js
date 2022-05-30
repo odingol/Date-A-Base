@@ -87,7 +87,10 @@
       prompts: [
         {
           prompt: "Hayden: 'Hey you must be the new student! USERNAME Right? Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
-          dialog1: "I'm not sure yet, but I'm ready to <div> right into it! ",
+          dialog1: {
+            "text": "I'm not sure yet, but I'm ready to <div> right into it! ",
+            "name": "Hayden "
+          },
           dialog2: "Very Cool! Maybe sometime you could help me learn about handlebars. I'd really like to impress Hayden.",
           dialog3: 'Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>. ',
           dialog4: "I looked at the rubric and it doesn't look like we will be working with SQL for a few months. Maybe another time? "

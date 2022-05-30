@@ -71,7 +71,7 @@ setCharPoints({...charPoints, [charName]: charPoints[charName]+1})
 if (promptIndex < promptQuestions.prompts.length) {
   setPromptIndex(promptIndex +1) 
 } else {
-  //end logic or tie to home page for reaults. 
+  //end logic or tie to home page for results. 
 }
   
  
