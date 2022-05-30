@@ -24,7 +24,9 @@ import promptQuestions from "../components/Dialogue";
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-    backgroundImage: `url(${process.env.PUBLIC_URL + "https://wallpaperaccess.com/full/859107.jpg"})`,
+    backgroundImage: `url(${
+      process.env.PUBLIC_URL + "https://wallpaperaccess.com/full/859107.jpg"
+    })`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     display: "flex",
@@ -49,18 +51,35 @@ export default function Game(props) {
   const { loading, data } = useQuery(QUERY_CHARACTERS);
   const characters = data || {};
 
-
   console.log("GAME CHARACTER", characters);
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log(promptIndex, charPoints);
+  console.log(charPoints);
+  let sortedArray = []
+  for(var points in charPoints){
+    sortedArray.push([points, charPoints[points]])
+  }
+
+  sortedArray.sort(function(a, b){
+    return b[1]-a[1];
+  })
+  console.log(sortedArray);
+
+  if(sortedArray[0][1] === sortedArray[1][1]){
+    console.log('true')
+  }
+  else{
+    console.log('false')
+  }
+  
   const dialogueClicked = function (event) {
     const charName = event.target.dataset.name;
     setCharPoints({ ...charPoints, [charName]: charPoints[charName] + 1 });
-    if (promptIndex < promptQuestions.prompts.length) {
-      setPromptIndex(promptIndex + 1);
+    if (promptIndex === promptQuestions.prompts.length) {
+      console.log('nope')
     } else {
+      setPromptIndex(promptIndex + 1);
       //end logic or tie to home page for results.
     }
   };
@@ -99,39 +118,53 @@ export default function Game(props) {
                 {/* <div>
                 <Dialogue characters={characters} />
               </div> */}
-            </Paper>
-                <Grid container spacing ={1} columns={16}>
-                  <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Hayden T. Manko-Lynn"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog1.text}</Button>
-               </Grid>
-               <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Jessie Scriptski"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog2.text}</Button>
-               </Grid>
-               <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Charles Stylima Sheen"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog3.text}</Button>
-               </Grid>
-               <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Sam Query-Lang"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog4.text}</Button>
-               </Grid>
-               </Grid>
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                sx={{m:3}}
-              >
-                Submit
-              </Button>
-          </>
-      </Paper>
-    </Container>
-      {"Copyright Â© "}{" "}
-      <Link color="inherit" href="https://mui.com/">
-        DataBase
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  </div>
+              </Paper>
+              <Grid container spacing={1} columns={16}>
+                <Grid item xs={16}>
+                  <Button
+                    onClick={dialogueClicked}
+                    data-name={"Hayden T. Manko-Lynn"}
+                    variant="outlined"
+                    style={{ width: "40rem", padding: 15 }}
+                  >
+                    {currentPrompt.dialog1.text}
+                  </Button>
+                </Grid>
+                <Grid item xs={16}>
+                  <Button
+                    onClick={dialogueClicked}
+                    data-name={"Jessie Scriptski"}
+                    variant="outlined"
+                    style={{ width: "40rem", padding: 15 }}
+                  >
+                    {currentPrompt.dialog2.text}
+                  </Button>
+                </Grid>
+                <Grid item xs={16}>
+                  <Button
+                    onClick={dialogueClicked}
+                    data-name={"Charles Stylima Sheen"}
+                    variant="outlined"
+                    style={{ width: "40rem", padding: 15 }}
+                  >
+                    {currentPrompt.dialog3.text}
+                  </Button>
+                </Grid>
+                <Grid item xs={16}>
+                  <Button
+                    onClick={dialogueClicked}
+                    data-name={"Sam Query-Lang"}
+                    variant="outlined"
+                    style={{ width: "40rem", padding: 15 }}
+                  >
+                    {currentPrompt.dialog4.text}
+                  </Button>
+                </Grid>
+              </Grid>
+            </>
+          </Paper>
+        </Container>
+      </Typography>
+    </div>
   );
 }

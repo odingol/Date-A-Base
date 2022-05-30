@@ -27,7 +27,8 @@ const characterSchema = new Schema({
   link: {
     type: String,
   },
-  dialogue: {
+  //use as an array to pass in multipe prompts
+  dialog: {
     type: String,
   }
 });
