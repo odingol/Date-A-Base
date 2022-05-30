@@ -105,16 +105,16 @@ if (promptIndex < promptQuestions.prompts.length) {
             </Paper>
                 <Grid container spacing ={1} columns={16}>
                   <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Hayden T. Manko-Lynn"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog1}</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Hayden T. Manko-Lynn"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog1.text}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Jessie Scriptski"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog2}</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Jessie Scriptski"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog2.text}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Charles Stylima Sheen"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog3}</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Charles Stylima Sheen"} variant="outlined" style={{width: '40rem', padding: 15 }}>{currentPrompt.dialog3.text}</Button>
                </Grid>
                <Grid item xs={16}>
-               <Button onClick= {dialogueClicked} data-name = {"Sam Query-Lang"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog4}</Button>
+               <Button onClick= {dialogueClicked} data-name = {"Sam Query-Lang"} variant="outlined" style={{width: '40rem', padding: 15}}>{currentPrompt.dialog4.text}</Button>
                </Grid>
                </Grid>
               <Button
