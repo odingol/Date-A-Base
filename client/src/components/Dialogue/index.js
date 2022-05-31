@@ -5,7 +5,7 @@ const promptQuestions =
     "Hayden T. Manko-Lynn": {
       points: 0,
       image: "/assets/images/HTMLboy.png",
-      bgimg: "/assets/backgrounds/schoolfront-bg.jpeg",
+      bgimg: "/assets/images/backgrounds/schoolfront-bg.jpeg",
       gender: "male",
       codeLanguage: "HTML",
       description:
