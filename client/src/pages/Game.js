@@ -146,6 +146,7 @@ export default function Game(props) {
                   border: "2px solid black",
                   width: "50rem",
                   height: "5rem",
+                  padding: "12px",
                   align: "center",
                   backgroundColor: "rgba(255, 249, 222)",
                   fontSize: "17px",
