@@ -76,6 +76,7 @@ const promptQuestions =
         "The neat freak of neat freaks, Sammy is undoubtedly the most organized student in the class. Viewing every assignment as a database in need of a schema, working with Sammy may not provide the most ambitious projects, but will definitely be the most polished.",
     },
   },
+  // Gender A Prompt and Gender B Prompt split
   prompts: [
     {
       prompt:
@@ -177,86 +178,86 @@ const promptQuestions =
         name: "Sam Query-Lang"
       }
     },
-    {
-      prompt:
-        "Haley: 'Hey you must be the new student! Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
-      dialog1: {
-        text: "I'm not sure yet, but I'm ready to <div> right into it! ",
-        name: "Hayley T. Manko-Lynn"
-      },
-      dialog2: {
-        text: "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.",
-        name: "Jess Scriptski"
-      },
-      dialog3: {
-        text: "I’m just here to let my style cascade on the class!",
-        name: "Charlie Stylima Sheen"
-      },
-      dialog4: {
-        text: "I’m here to learn about databases and go on date-a-bases. Ha Get it?",
-        name: "Sammy Query-Lang"
-      }
-    },
-    {
-      prompt:
-        "Jess: 'That's so cool! I'm here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox.'",
-      dialog1: {
-        text: "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
-        name: "Hayley T. Manko-Lynn"
-      },
-      dialog2: {
-        text: "Oh right on! I'm more of a Google Chrome user myself. I take it you took up JS from your mom? ",
-        name: "Jess Scriptski"
-      },
-      dialog3: {
-        text: "Oh no way! Firefox? That’s pretty cool, although I do have some design ideas that they may want to change.",
-        name: "Charlie Stylima Sheen"
-      },
-      dialog4: {
-        text: "*Ignores them*",
-        name: "Sammy Query-Lang"
-      }
-    },
-    {
-      prompt:
-        "Charlie: 'Do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
-      dialog1: {
-        text: "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>.",
-        name: "Hayley T. Manko-Lynn"
-      },
-      dialog2: {
-        text: "No thanks, I’m not impressed with your methods().",
-        name: "Jess Scriptski"
-      },
-      dialog3: {
-        text: "Sure! Let's pull ourselves up from the bootstraps and rock this class!",
-        name: "Charlie Stylima Sheen"
-      },
-      dialog4: {
-        text: "Let’s table this for now, but maybe we could meet up later. What row are you sitting in?",
-        name: "Sammy Query-Lang"
-      }
-    },
-    {
-      prompt:
-        "Sammy: 'Hey, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
-      dialog1: {
-        text: "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time?",
-        name: "Hayley T. Manko-Lynn"
-      },
-      dialog2: {
-        text: "You seem really nice and detail oriented but I don’t think this will function() well.",
-        name: "Jess Scriptski"
-      },
-      dialog3: {
-        text: "I’m sort of looking for someone who is looking to go above and beyond to wow the graders. Sorry.",
-        name: "Charlie Stylima Sheen"
-      },
-      dialog4: {
-        text: "Yeah that would be awesome! You seem well organized, want to add my number to your database? ",
-        name: "Sammy Query-Lang"
-      }
-    },
+    // {
+    //   prompt:
+    //     "Haley: 'Hey you must be the new student! Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
+    //   dialog1: {
+    //     text: "I'm not sure yet, but I'm ready to <div> right into it! ",
+    //     name: "Hayley T. Manko-Lynn"
+    //   },
+    //   dialog2: {
+    //     text: "I’m not sure how I’m going to function() with all of these topics, but my learning method is pretty sound.",
+    //     name: "Jess Scriptski"
+    //   },
+    //   dialog3: {
+    //     text: "I’m just here to let my style cascade on the class!",
+    //     name: "Charlie Stylima Sheen"
+    //   },
+    //   dialog4: {
+    //     text: "I’m here to learn about databases and go on date-a-bases. Ha Get it?",
+    //     name: "Sammy Query-Lang"
+    //   }
+    // },
+    // {
+    //   prompt:
+    //     "Jess: 'That's so cool! I'm here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox.'",
+    //   dialog1: {
+    //     text: "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
+    //     name: "Hayley T. Manko-Lynn"
+    //   },
+    //   dialog2: {
+    //     text: "Oh right on! I'm more of a Google Chrome user myself. I take it you took up JS from your mom? ",
+    //     name: "Jess Scriptski"
+    //   },
+    //   dialog3: {
+    //     text: "Oh no way! Firefox? That’s pretty cool, although I do have some design ideas that they may want to change.",
+    //     name: "Charlie Stylima Sheen"
+    //   },
+    //   dialog4: {
+    //     text: "*Ignores them*",
+    //     name: "Sammy Query-Lang"
+    //   }
+    // },
+    // {
+    //   prompt:
+    //     "Charlie: 'Do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
+    //   dialog1: {
+    //     text: "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>.",
+    //     name: "Hayley T. Manko-Lynn"
+    //   },
+    //   dialog2: {
+    //     text: "No thanks, I’m not impressed with your methods().",
+    //     name: "Jess Scriptski"
+    //   },
+    //   dialog3: {
+    //     text: "Sure! Let's pull ourselves up from the bootstraps and rock this class!",
+    //     name: "Charlie Stylima Sheen"
+    //   },
+    //   dialog4: {
+    //     text: "Let’s table this for now, but maybe we could meet up later. What row are you sitting in?",
+    //     name: "Sammy Query-Lang"
+    //   }
+    // },
+    // {
+    //   prompt:
+    //     "Sammy: 'Hey, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
+    //   dialog1: {
+    //     text: "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time?",
+    //     name: "Hayley T. Manko-Lynn"
+    //   },
+    //   dialog2: {
+    //     text: "You seem really nice and detail oriented but I don’t think this will function() well.",
+    //     name: "Jess Scriptski"
+    //   },
+    //   dialog3: {
+    //     text: "I’m sort of looking for someone who is looking to go above and beyond to wow the graders. Sorry.",
+    //     name: "Charlie Stylima Sheen"
+    //   },
+    //   dialog4: {
+    //     text: "Yeah that would be awesome! You seem well organized, want to add my number to your database? ",
+    //     name: "Sammy Query-Lang"
+    //   }
+    // },
   ]
 };
 

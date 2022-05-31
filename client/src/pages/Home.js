@@ -100,6 +100,8 @@ export default function Home(props) {
               )}
             </div> */}
                 {/* Seed in matched character description below */}
+                {/* use useState for match or no match and call the yourMatch from local storage on home page */}
+                {/* wrap a turnary statement around p tag of if useState of yourMatch is empty, display no matches yet, if game has been played, display yourMatch information from local storage */}
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
                   cillum dolore eu fugiat nulla pariatur. Excepteur sint

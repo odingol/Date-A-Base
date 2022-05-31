@@ -15,6 +15,8 @@ import {
   // FormControl,]
   Link,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 
 import { makeStyles } from "@material-ui/core/styles";
 // import { ClassNames } from "@emotion/react";
@@ -35,8 +37,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// Second props for gender A and gender B distinction
+// Set a state called Gender to hand in game prop information
 export default function Game(props) {
   // We need to import useMutation in our mutations.js so we can use the `${userName}` in our prompt1
+  let navigate = useNavigate();
 
   const [promptIndex, setPromptIndex] = useState(0);
   const [charPoints, setCharPoints] = useState({
@@ -72,12 +77,27 @@ export default function Game(props) {
   else{
     console.log('false')
   }
+
+  const saveMatch = () => {
+    const endMatch = {
+      name: sortedArray[0][0],
+      points: sortedArray[0][1]
+    }
+    // use useState for match or no match and call the yourMatch from local storage on home page
+    // future development: direct information to database instead of local storage.
+    // user array of subdocuments
+    localStorage.setItem("yourMatch", JSON.stringify(endMatch))
+  }
   
   const dialogueClicked = function (event) {
     const charName = event.target.dataset.name;
     setCharPoints({ ...charPoints, [charName]: charPoints[charName] + 1 });
-    if (promptIndex === promptQuestions.prompts.length) {
-      console.log('nope')
+    console.log(promptIndex);
+    console.log(promptQuestions.prompts.length)
+    if (promptIndex >= promptQuestions.prompts.length-1) {
+      // create function for saving match data before moving to next page to display match
+      saveMatch();
+      navigate(`/Home`);
     } else {
       setPromptIndex(promptIndex + 1);
       //end logic or tie to home page for results.
