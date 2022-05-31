@@ -89,6 +89,15 @@ export default function Game(props) {
     localStorage.setItem("yourMatch", JSON.stringify(endMatch))
   }
   
+  // const setTieBreaker = function (character1, character2) {
+  //   if (character1 === character2);
+  //   return finalPrompt
+  // } else {
+  //   console.log('false')
+  // } {
+
+  // }
+
   const dialogueClicked = function (event) {
     const charName = event.target.dataset.name;
     setCharPoints({ ...charPoints, [charName]: charPoints[charName] + 1 });
@@ -96,6 +105,15 @@ export default function Game(props) {
     console.log(promptQuestions.prompts.length)
     if (promptIndex >= promptQuestions.prompts.length-1) {
       // create function for saving match data before moving to next page to display match
+      // sortedArray.sort(function(a, b){
+      //   return b[1]-a[1];
+      // })
+      // if(sortedArray[0][1] === sortedArray[1][1]){
+      //   setTieBreaker(sortedArray[0][0], sortedArray[1][0])
+      // }
+      // else{
+      //   console.log('false')
+      // }
       saveMatch();
       navigate(`/Home`);
     } else {
@@ -121,9 +139,10 @@ export default function Game(props) {
               backgroundColor: "hsla(0, 100%, 90%, 0.8",
             }}
           >
+             <img src="{currentPrompt.img}" />
             <>
               <Typography variant="h1" style={{ padding: 20 }}>
-                Images
+                {/* Images */}
               </Typography>
               <Paper
                 style={{
@@ -135,9 +154,7 @@ export default function Game(props) {
                 sx={{ mb: 3 }}
               >
                 <p>{currentPrompt.prompt}</p>
-                {/* <div>
-                <Dialogue characters={characters} />
-              </div> */}
+                
               </Paper>
               <Grid container spacing={1} columns={16}>
                 <Grid item xs={16}>
