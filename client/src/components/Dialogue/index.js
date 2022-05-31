@@ -80,7 +80,7 @@ const promptQuestions =
   prompts: [
     {
       prompt:
-        "Hayden: 'Hey you must be the new student! Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?'",
+        `Hayden: "Hey you must be the new student! Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?"`,
       dialog1: {
         text: "I'm not sure yet, but I'm ready to <div> right into it! ",
         name: "Hayden T. Manko-Lynn",
@@ -100,7 +100,7 @@ const promptQuestions =
     },
     {
       prompt:
-        "Jessie: 'That's so cool! I'm here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox.'",
+        `Jessie: "That's so cool! I'm here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox."`,
       dialog1: {
         text: "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
         name: "Hayden T. Manko-Lynn"
@@ -120,7 +120,7 @@ const promptQuestions =
     },
     {
       prompt:
-        "Charles: Do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉'",
+        `"Charles: Do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉"`,
       dialog1: {
         text: "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>.",
         name: "Hayden T. Manko-Lynn"
@@ -140,7 +140,7 @@ const promptQuestions =
     },
     {
       prompt:
-        "Sam: 'Hey, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!' ",
+        `"Sam: 'Hey, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!"`,
       dialog1: {
         text: "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time?",
         name: "Hayden T. Manko-Lynn"
@@ -160,7 +160,7 @@ const promptQuestions =
     },
     {
       prompt:
-        "Brian: 'Alright class, it's time to get your groups together. Let me know who you would like to work with. But no promises that we will be able to get everyone paired up with their desired choice. Yay coding!'",
+        `"Brian: 'Alright class, it's time to get your groups together. Let me know who you would like to work with. But no promises that we will be able to get everyone paired up with their desired choice. Yay coding!"`,
       dialog1: {
         text: "Hayden",
         name: "Hayden T. Manko-Lynn"
