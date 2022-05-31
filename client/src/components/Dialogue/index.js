@@ -4,7 +4,8 @@ const promptQuestions =
   charList: {
     "Hayden T. Manko-Lynn": {
       points: 0,
-      image: "https://www.google.com/",
+      image: "/assets/images/HTMLboy.png",
+      bgimg: "/assets/backgrounds/schoolfront-bg.jpeg",
       gender: "male",
       codeLanguage: "HTML",
       description:
@@ -12,7 +13,8 @@ const promptQuestions =
     },
     "Jessie Scriptski": {
       points: 0,
-      image: "https://www.google.com/",
+      image: "/assets/images/JSboy.png",
+      bgimg: "/assets/backgrounds/hallway-bg.jpeg",
       gender: "male",
       codeLanguage: "JS",
       description:
@@ -20,7 +22,8 @@ const promptQuestions =
     },
     "Charles Stylima Sheen": {
       points: 0,
-      image: "https://www.google.com/",
+      image: "/assets/images/CSSboy.png",
+      bgimg: "/assets/backgrounds/classroom-bg.png",
       gender: "male",
       codeLanguage: "CSS",
       description:
@@ -28,7 +31,8 @@ const promptQuestions =
     },
     "Sam Query-Lang": {
       points: 0,
-      image: "https://www.google.com/",
+      image: "/assets/images/SQLboy.png",
+      bgimg: "/assets/backgrounds/cherryblossom-bg.png",
       gender: "male",
       codeLanguage: "SQL",
       description:
