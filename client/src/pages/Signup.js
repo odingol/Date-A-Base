@@ -63,7 +63,9 @@ export default function Signup(props) {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "url(https://source.unsplash.com/random)",
+            backgroundImage: `url(${
+              process.env.PUBLIC_URL + "./assets/images/backgrounds/cover2.png"
+            })`,
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
