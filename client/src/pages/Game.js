@@ -130,28 +130,29 @@ export default function Game(props) {
         align="center"
         {...props}
       >
+          <img src="${currentPrompt.img}" />
         <Container>
           <Paper
             style={{
-              padding: 80,
+              padding: 50,
               border: "3px solid black",
               width: "50rem",
               backgroundColor: "hsla(0, 100%, 90%, 0.8",
             }}
           >
-             <img src="{currentPrompt.img}" />
             <>
-              <Typography variant="h1" style={{ padding: 20 }}>
-                {/* Images */}
-              </Typography>
               <Paper
                 style={{
-                  border: "1px solid black",
+                  border: "2px solid black",
                   width: "50rem",
                   height: "5rem",
-                  align: "bottom",
+                  align: "center",
+                  backgroundColor: "rgba(255, 249, 222)",
+                  fontSize: "17px",
+                  boxShadow: '0px 10px 10px 10px rgba(255, 249, 222, 0.7)',
+                  fontWeight: "bold",
                 }}
-                sx={{ mb: 3 }}
+                sx={{ mb: 4 }}
               >
                 <p>{currentPrompt.prompt}</p>
                 
@@ -161,7 +162,7 @@ export default function Game(props) {
                   <Button
                     onClick={dialogueClicked}
                     data-name={"Hayden T. Manko-Lynn"}
-                    variant="outlined"
+                    variant="contained"
                     style={{ width: "40rem", padding: 15 }}
                   >
                     {currentPrompt.dialog1.text}
@@ -171,7 +172,7 @@ export default function Game(props) {
                   <Button
                     onClick={dialogueClicked}
                     data-name={"Jessie Scriptski"}
-                    variant="outlined"
+                    variant="contained"
                     style={{ width: "40rem", padding: 15 }}
                   >
                     {currentPrompt.dialog2.text}
@@ -181,7 +182,7 @@ export default function Game(props) {
                   <Button
                     onClick={dialogueClicked}
                     data-name={"Charles Stylima Sheen"}
-                    variant="outlined"
+                    variant="contained"
                     style={{ width: "40rem", padding: 15 }}
                   >
                     {currentPrompt.dialog3.text}
@@ -191,7 +192,7 @@ export default function Game(props) {
                   <Button
                     onClick={dialogueClicked}
                     data-name={"Sam Query-Lang"}
-                    variant="outlined"
+                    variant="contained"
                     style={{ width: "40rem", padding: 15 }}
                   >
                     {currentPrompt.dialog4.text}
