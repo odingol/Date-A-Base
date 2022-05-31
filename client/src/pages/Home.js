@@ -1,13 +1,14 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { useQuery } from '@apollo/client';
 // import { QUERY_CHARACTERS } from "../utils/queries";
 // Styling Imports
-import { CssBaseline, Box, Container } from "@mui/material";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Paper, Typography, Button, Grid } from "@mui/material";
+import { Paper, Typography, Button, Grid, CssBaseline, Box, Container } from "@mui/material";
 import { makeStyles } from '@material-ui/core/styles';
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+
+
+
 // const WhiteTextTypography = withStyles({
 //   root: {
 //     color: "#FFFFFF"
@@ -31,6 +35,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home(props) {
   const classes = useStyles();
+  const [match, setMatch] = useState([])
+
+  // setMatch(JSON.parse(localStorage.getItem("yourMatch")))
+  // console.log(match.name);
+
+  useEffect(() => {
+    const finalMatch = async () => {
+      let character = await JSON.parse(localStorage.getItem("yourMatch"))
+      console.log(character)
+      setMatch(character.name)
+      console.log(match, "matchState")
+    }
+    finalMatch();
+  }, [match])
 
   // const { loading, data } = useQuery(QUERY_CHARACTERS);
   // const savedCharacter = data?.savedCharacter || [];
@@ -82,10 +100,6 @@ export default function Home(props) {
                 </ul>
                 {/* Image of Brian */}
               </Container>
-              <Container maxWidth="md">
-                <h3>Your Classmates</h3>
-                {/* Images of all the candidates */}
-              </Container>
               {/* Saved Character Section */}
               <Container maxWidth="sm" className="matchHistory">
                 <h3>Your Matches</h3>
@@ -102,12 +116,7 @@ export default function Home(props) {
                 {/* Seed in matched character description below */}
                 {/* use useState for match or no match and call the yourMatch from local storage on home page */}
                 {/* wrap a turnary statement around p tag of if useState of yourMatch is empty, display no matches yet, if game has been played, display yourMatch information from local storage */}
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum.
-                </p>
+              {match ? <p>{match}</p>: <p>No Match History</p>}
               </Container>
               <div>
                 <Grid container justify="center">
