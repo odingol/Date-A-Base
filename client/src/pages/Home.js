@@ -11,28 +11,13 @@ import {
   Box,
   Container,
 } from "@mui/material";
-import { makeStyles } from "@material-ui/core/styles";
-import promptQuestions from "../components/Dialogue";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: "100vh",
-    backgroundImage: `url(${
-      process.env.PUBLIC_URL + "./assets/images/backgrounds/coverbg.jpeg"
-    })`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-}));
 
 // const currentPrompt = promptQuestions.prompts[promptIndex];
 // const currentImg = currentPrompt.image
 
 export default function Home(props) {
-  const classes = useStyles();
+
   const [match, setMatch] = useState([]);
 
   // setMatch(JSON.parse(localStorage.getItem("yourMatch")))
@@ -58,7 +43,20 @@ export default function Home(props) {
         style={{ backgroundColor: "hsla(0, 100%, 90%, 0.8" }}
         sx={{ mt: 0 }}
       />
-      <div className={classes.root}>
+      <div
+        className="{classes.root}"
+        style={{
+          minHeight: "100vh",
+          backgroundImage: `url(${
+            process.env.PUBLIC_URL + "./assets/images/backgrounds/coverbg.jpeg"
+          })`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Typography color="white">
           <CssBaseline />
           {/* User Info Section */}
