@@ -29,7 +29,7 @@ LINK TO DEPLOYED SITE FOUND [HERE](https://google.com/)
 
 Sign Up Screen
 
-![SignUpScreen](./client/public/assets/images/SignUpScreenshot.png "Sign Up Page")
+![SignUpScreen](./client/public/assets/images/SignUpScreenshot.png "Sign Up Page HERE")
 
 Login Screen
 
