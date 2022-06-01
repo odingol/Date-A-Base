@@ -41,7 +41,7 @@ Homepage
 
 Gamepage
 
-![Gamepage]()
+![Gamepage](./client/public/assets/images/GamePageScreenshot.png)
 
 ### Code Snippets
 
