@@ -5,24 +5,24 @@ import { useQuery } from "@apollo/client";
 import { Grid, Paper, Button, Container, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 // import { ClassNames } from "@emotion/react";
 
 import promptQuestions from "../components/Dialogue";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: "100vh",
-    backgroundImage: `url(${
-      process.env.PUBLIC_URL + "{currentPrompt.bgimg}"
-    })`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     minHeight: "100vh",
+//     backgroundImage: `url('${
+//       process.env.PUBLIC_URL}${currentPrompt.bgimg}
+//     ')`,
+//     backgroundRepeat: "no-repeat",
+//     backgroundSize: "cover",
+//     display: "flex",
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+// }));
 
 // Second props for gender A and gender B distinction
 // Set a state called Gender to hand in game prop information
@@ -39,11 +39,14 @@ export default function Game(props) {
   });
   console.log(promptQuestions);
   const currentPrompt = promptQuestions.prompts[promptIndex];
-  const classes = useStyles();
   const { loading, data } = useQuery(QUERY_CHARACTERS);
-  const characters = data || {};
+  // const characters = data || {};
+  const currentBg = currentPrompt.bgimg
+  const currentImg = currentPrompt.image
+  console.log(currentBg)
 
-  console.log("GAME CHARACTER", characters);
+
+  // console.log("GAME CHARACTER", characters);
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -56,12 +59,12 @@ export default function Game(props) {
   sortedArray.sort(function (a, b) {
     return b[1] - a[1];
   });
-  console.log(sortedArray);
+  // console.log(sortedArray);
 
   if (sortedArray[0][1] === sortedArray[1][1]) {
-    console.log("true");
+    // console.log("true");
   } else {
-    console.log("false");
+    // console.log("false");
   }
 
   const saveMatch = () => {
@@ -87,8 +90,8 @@ export default function Game(props) {
   const dialogueClicked = function (event) {
     const charName = event.target.dataset.name;
     setCharPoints({ ...charPoints, [charName]: charPoints[charName] + 1 });
-    console.log(promptIndex);
-    console.log(promptQuestions.prompts.length);
+    // console.log(promptIndex);
+    // console.log(promptQuestions.prompts.length);
     if (promptIndex >= promptQuestions.prompts.length - 1) {
       // create function for saving match data before moving to next page to display match
       // sortedArray.sort(function(a, b){
@@ -109,30 +112,41 @@ export default function Game(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <div style={{
+      minHeight: "100vh",
+            backgroundImage: `url(${currentBg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+    }}>
       <Typography
         variant="body2"
         color="text.secondary"
         align="center"
         {...props}
       >
-        <img src="{currentPrompt.img}" />
+        <img src={currentImg} style={{
+          height: 500, 
+          margin: -5
+        }}/>
         <Container>
-          <Paper
+          {/* <Paper
             style={{
               padding: 50,
               border: "3px solid black",
               width: "50rem",
               backgroundColor: "hsla(0, 100%, 90%, 0.8",
-            }}
-          >
+            }} */}
+          {/* > */}
             <>
               <Paper
                 style={{
                   border: "2px solid black",
-                  width: "50rem",
+                  width: "70rem",
                   height: "5rem",
-                  padding: "12px",
+                  padding: "0px",
                   align: "center",
                   backgroundColor: "rgba(255, 249, 222)",
                   fontSize: "17px",
@@ -186,7 +200,7 @@ export default function Game(props) {
                 </Grid>
               </Grid>
             </>
-          </Paper>
+          {/* </Paper> */}
         </Container>
       </Typography>
     </div>

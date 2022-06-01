@@ -22,10 +22,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const styles = {
   paperContainer: {
-    // minHeight: "17vh",
-    // backgroundImage: `url(${
-    //   process.env.PUBLIC_URL + "./assets/images/backgrounds/nav1.jpeg"
-    // })`,
+    minHeight: "17vh",
+    backgroundImage: `url(${
+      process.env.PUBLIC_URL + "./assets/images/backgrounds/nav1.jpeg"
+    })`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     display: "flex",
@@ -35,7 +35,7 @@ const styles = {
   },
 };
 
-const pages = ["Products"];
+const pages = [""];
 const settings = ["Profile", "Account", "Logout"];
 
 export default function Header(props) {
@@ -106,12 +106,12 @@ export default function Header(props) {
                 anchorEl={anchorElNav}
                 anchorOrigin={{
                   vertical: "bottom",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
@@ -164,8 +164,8 @@ export default function Header(props) {
 
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 5 }}>
+                  <Avatar alt="Remy Sharp" src="./assets/images/Teacher-Brian.png" />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -174,12 +174,12 @@ export default function Header(props) {
                 anchorEl={anchorElUser}
                 anchorOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "right",
+                  horizontal: "left",
                 }}
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}

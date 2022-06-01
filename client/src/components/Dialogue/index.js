@@ -4,8 +4,6 @@ const promptQuestions =
   charList: {
     "Hayden T. Manko-Lynn": {
       points: 0,
-      image: "/assets/images/HTMLboy.png",
-      bgimg: "/assets/images/backgrounds/schoolfront-bg.jpeg",
       gender: "male",
       codeLanguage: "HTML",
       description:
@@ -13,8 +11,6 @@ const promptQuestions =
     },
     "Jessie Scriptski": {
       points: 0,
-      image: "/assets/images/JSboy.png",
-      bgimg: "/assets/backgrounds/hallway-bg.jpeg",
       gender: "male",
       codeLanguage: "JS",
       description:
@@ -22,8 +18,6 @@ const promptQuestions =
     },
     "Charles Stylima Sheen": {
       points: 0,
-      image: "/assets/images/CSSboy.png",
-      bgimg: "/assets/backgrounds/classroom-bg.png",
       gender: "male",
       codeLanguage: "CSS",
       description:
@@ -31,8 +25,6 @@ const promptQuestions =
     },
     "Sam Query-Lang": {
       points: 0,
-      image: "/assets/images/SQLboy.png",
-      bgimg: "/assets/backgrounds/cherryblossom-bg.png",
       gender: "male",
       codeLanguage: "SQL",
       description:
@@ -85,6 +77,8 @@ const promptQuestions =
     {
       prompt:
         `Hayden: "Hey you must be the new student! Welcome to the UW Full-Stack Web Development Boot Camp! What are you most excited to learn about?"`,
+      image: "/assets/images/HTMLboy.png",
+      bgimg: "/assets/images/backgrounds/schoolfront-bg.jpeg",
       dialog1: {
         text: "I'm not sure yet, but I'm ready to <div> right into it! ",
         name: "Hayden T. Manko-Lynn",
@@ -105,6 +99,8 @@ const promptQuestions =
     {
       prompt:
         `Jessie: "That's so cool! I'm here to learn about JavaScript. My dad got his doctorate in Python development and my mom was the main developer behind Firefox."`,
+      image: "/assets/images/JSboy.png",
+      bgimg: "/assets/images/backgrounds/hallway-bg.jpeg",
       dialog1: {
         text: "Very Cool! Maybe sometime you could help me learn about handlebars. I’d really like to impress Hayden.",
         name: "Hayden T. Manko-Lynn"
@@ -125,6 +121,8 @@ const promptQuestions =
     {
       prompt:
         `"Charles: Do you want to be study group partners? I'm always available and my phone number is mobile responsive! 😉"`,
+      image: "/assets/images/CSSboy.png",
+      bgimg: "/assets/images/backgrounds/classroom-bg.png",
       dialog1: {
         text: "Hayden seems like a good <anchor> to have in our group. Just be careful not to push their <buttons>.",
         name: "Hayden T. Manko-Lynn"
@@ -145,6 +143,8 @@ const promptQuestions =
     {
       prompt:
         `"Sam: 'Hey, I noticed you were looking for people to pair up with as 'study partners'. Would you like to work with me? We could be like seeds to a schema!"`,
+      image: "/assets/images/SQLboy.png",
+      bgimg: "/assets/images/backgrounds/cherryblossom-bg.png",
       dialog1: {
         text: "I looked at the rubric and it doesn’t look like we will be working with SQL for a few months. Maybe another time?",
         name: "Hayden T. Manko-Lynn"
@@ -165,6 +165,8 @@ const promptQuestions =
     {
       prompt:
         `"Brian: 'Alright class, it's time to get your groups together. Let me know who you would like to work with. But no promises that we will be able to get everyone paired up with their desired choice. Yay coding!"`,
+        image: "/assets/images/Brian.png",
+        bgimg: "/assets/images/backgrounds/street-bg.jpeg",
       dialog1: {
         text: "Hayden",
         name: "Hayden T. Manko-Lynn"
