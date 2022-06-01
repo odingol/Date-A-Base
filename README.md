@@ -29,15 +29,15 @@ LINK TO DEPLOYED SITE FOUND [HERE](https://google.com/)
 
 Sign Up Screen
 
-![SignUpScreen]()
+![SignUpScreen](./client/public/assets/images/SignUpScreenshot.png "Sign Up Page")
 
 Login Screen
 
-![LoginScreen]()
+![LoginScreen](./client/public/assets/images/LoginScreenshot.png "Log In Page")
 
 Homepage
 
-![Homepage]()
+![Homepage](./client/public/assets/images/HomePageScreenshot.png "Home Screen")
 
 Gamepage
 
@@ -47,15 +47,15 @@ Gamepage
 
 Data Render Code Snippet
 
-![DataRender]()
+![DataRender](./client/public/assets/images/DataRender.PNG "Data Render for Game Page")
 
 Typedefs
 
-![Typedefs]()
+![Typedefs](./client/public/assets/images/TypeDefs.PNG "TypeDefs")
 
 App JS File
 
-![AppJSFile]()
+![AppJSFile](./client/public/assets/images/AppJS.PNG "App JS structuring")
 
 
 ## INSTALLATION
