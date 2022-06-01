@@ -12,6 +12,7 @@ import {
   Container,
 } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
+import promptQuestions from "../components/Dialogue";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// const currentPrompt = promptQuestions.prompts[promptIndex];
+// const currentImg = currentPrompt.image
 
 export default function Home(props) {
   const classes = useStyles();
@@ -39,6 +42,8 @@ export default function Home(props) {
     const finalMatch = async () => {
       let character = await JSON.parse(localStorage.getItem("yourMatch"));
       console.log(character);
+      // let img = await JSON.parse(localStorage.getItem("yourMatch"));
+      // console.log(img);
       setMatch(character.name);
       console.log(match, "matchState");
     };
@@ -83,8 +88,8 @@ export default function Home(props) {
                   </p>
                   <h3>Your Dating Profile:</h3>
                   <ul>
-                    <li>Name:</li>
-                    <li>Gender: Female</li>
+                    <li>Name: Brian</li>
+                    <li>Gender: Male</li>
                     <li>
                       Description: A go-getter student looking to take on the
                       challenge of full-stack web development and begin their
@@ -92,7 +97,7 @@ export default function Home(props) {
                     </li>
                   </ul>
                 </Container>
-                <Container maxWidth="md">
+                {/* <Container maxWidth="md">
                   <h3>Your Teacher</h3>
                   <ul>
                     <li>Name: Brian</li>
@@ -105,7 +110,7 @@ export default function Home(props) {
                     </li>
                   </ul>
                   {/* Image of Brian */}
-                </Container>
+                {/* </Container>  */}
                 {/* Saved Character Section */}
                 <Container maxWidth="sm" className="matchHistory">
                   <h3>Your Matches</h3>
